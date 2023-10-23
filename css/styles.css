@@ -8,10 +8,14 @@
   --color-granite: rgb(37 38 41);
   --color-nemo: rgb(255 74 17);
   --color-foam: rgb(255 255 255);
+  --margin-zero: 0;
+  --letter-spacing: 0.025em;
+  --padding-medium: 16px;
+  --border-radius-small: 4px;
 }
 
 body {
-  margin: 0;
+  margin: var(--margin-zero);
   font-family: system-ui;
   line-height: 1.2;
 }
@@ -24,14 +28,14 @@ h1 {
   text-align: center;
   color: var(--color-foam);
   line-height: 1.4;
-  margin: 0;
-  letter-spacing: 0.025em;
+  margin: var(--margin-zero);
+  letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--padding-medium);
 }
 
 h2 {
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing);
 }
 
 strong {
@@ -42,9 +46,9 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 16px;
+  padding: var(--padding-medium);
   width: min(1000px, 100%);
-  margin: 0 auto;
+  margin: var(--margin-zero) auto;
 }
 
 article {
@@ -61,10 +65,10 @@ figure {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0;
+  margin: var(--margin-zero);
   padding: 10px;
   background-color: var(--color-nemo);
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
 }
 
 figcaption {
@@ -74,14 +78,14 @@ figcaption {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: 8px var(--padding-medium);
 }
 
 a {
   display: inline-block;
   font-size: smaller;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   background-color: var(--color-nemo);
   color: var(--color-foam);
 }
@@ -95,8 +99,8 @@ a:focus-visible {
 mark {
   background-color: var(--color-nemo);
   color: var(--color-foam);
-  border-radius: 4px;
-  letter-spacing: 0.025em;
+  border-radius: var(--border-radius-small);
+  letter-spacing: var(--letter-spacing);
 }
 
 ::selection {
